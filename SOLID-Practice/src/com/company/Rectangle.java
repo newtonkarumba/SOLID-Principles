@@ -33,16 +33,20 @@ public class Rectangle extends Shape {
     }
 
     public void Formulate(){
-
+        System.out.println("This is a Rectangle. would you like to do... ");
+        System.out.println("1.Area ");
+        System.out.println("2.Volume ");
+        Scanner sn = new Scanner(System.in);
+        choice = sn.nextInt();
             switch (choice){
 
-                case 1:
-                    System.out.println("Area of triangle");
+                case 1 :
+
                     getArea();
                     break;
 
                 case 2 :
-                    System.out.println("Volume of triangle");
+
                     getVolume();
                     break;
                 default:

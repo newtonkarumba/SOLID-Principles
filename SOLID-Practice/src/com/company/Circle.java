@@ -40,7 +40,9 @@ public class Circle extends Shape{
     }
 
     public void Formulate(){
-
+        System.out.println("1.Area ");
+        System.out.println("2.Volume ");
+        Scanner sn = new Scanner(System.in);
         switch (choice){
 
             case 1:
@@ -58,5 +60,6 @@ public class Circle extends Shape{
         }
 
     }
+
 
 }
