@@ -4,10 +4,14 @@ import java.util.Scanner;
 
 public class Tetrahedron extends Shape{
     private int a;
+    private Scanner scanner;
 
+    public Tetrahedron() {
+        Scanner scanner = new Scanner(System.in);
+
+    }
 
     public void  Prompt(int a){
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the value for a ");
         this.a=scanner.nextInt();
 
@@ -49,6 +53,17 @@ public class Tetrahedron extends Shape{
                 System.out.println("You have entered a wrong choice");
                 Formulate();
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Tetrahedron{" +
+                "choice=" + choice +
+                ", area=" + area +
+                ", volume=" + volume +
+                ", areaMessage='" + areaMessage + '\'' +
+                ", volumeMessage='" + volumeMessage + '\'' +
+                '}';
     }
 }
 

@@ -5,10 +5,14 @@ import java.util.Scanner;
 public class Cube extends Shape{
         String askForSide = "Please enter the value for one of the sides ";
          int a;
+        private Scanner sc;
 
+    public Cube() {
+        Scanner sc = new Scanner(System.in);
+    }
 
     public void  Prompt(int a){
-        Scanner sc = new Scanner(System.in);
+
         System.out.println(askForSide);
         this.a=sc.nextInt();
 
@@ -33,8 +37,7 @@ public class Cube extends Shape{
                 System.out.println("This is a Cube. would you like to do... ");
                 System.out.println("1.Area ");
                 System.out.println("2.Volume ");
-                Scanner sn = new Scanner(System.in);
-                choice = sn.nextInt();
+                choice = sc.nextInt();
                 switch (choice) {
 
                     case 1:
@@ -51,4 +54,13 @@ public class Cube extends Shape{
                         Formulate();
                 }
             }
+
+    @Override
+    public String toString() {
+        return "Cube{" +
+                "askForSide='" + askForSide + '\'' +
+                ", a=" + a +
+                ", sc=" + sc +
+                '}';
+    }
 }

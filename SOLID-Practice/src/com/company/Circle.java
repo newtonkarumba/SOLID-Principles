@@ -6,18 +6,19 @@ public class Circle extends Shape{
     public static final int pie = 3;
     private int r;
     private int l;
+    public Scanner sc;
 
 
-
+    public Circle() {
+        Scanner sc = new Scanner(System.in);
+    }
 
     public void  Prompt(int r){
-        Scanner sc = new Scanner(System.in);
         System.out.println("Please enter the measurement for the radius");
         this.r=sc.nextInt();
 
     }
     public void  volPrompt(int r, int l){
-        Scanner sc = new Scanner(System.in);
         System.out.println("Please enter the measurement for the radius");
         this.r=sc.nextInt();
         System.out.println("Please enter the measurement for the length");
@@ -42,7 +43,7 @@ public class Circle extends Shape{
     public void Formulate(){
         System.out.println("1.Area ");
         System.out.println("2.Volume ");
-        Scanner sn = new Scanner(System.in);
+        choice = sc.nextInt();
         switch (choice){
 
             case 1:
@@ -61,5 +62,15 @@ public class Circle extends Shape{
 
     }
 
-
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "choice=" + choice +
+                ", area=" + area +
+                ", volume=" + volume +
+                ", areaMessage='" + areaMessage + '\'' +
+                ", volumeMessage='" + volumeMessage + '\'' +
+                '}';
+    }
 }
+

@@ -7,22 +7,23 @@ public class Rectangle extends Shape {
     public int width;
     public int height;
     public int choice;
-
     public Scanner scanner;
     String areaMessage = "Area of the rectangle is: ";
     String volumeMessage = "Volume of the rectangle is: ";
 
 
-        public void  areaPrompt(int length,int width){
+    public Rectangle() {
         Scanner scanner = new Scanner(System.in);
+    }
+
+    public void  areaPrompt(int length, int width){
         System.out.println("Please enter the value for length ");
-       this.length=scanner.nextInt();
+        this.length=scanner.nextInt();
         System.out.println("Please enter the value for width ");
         this.width=scanner.nextInt();
 
     }
     public void  volumePrompt(int length,int width, int height){
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the value for length ");
         this.length=scanner.nextInt();
         System.out.println("Please enter the value for width ");
@@ -36,8 +37,7 @@ public class Rectangle extends Shape {
         System.out.println("This is a Rectangle. would you like to do... ");
         System.out.println("1.Area ");
         System.out.println("2.Volume ");
-        Scanner sn = new Scanner(System.in);
-        choice = sn.nextInt();
+        choice = scanner.nextInt();
             switch (choice){
 
                 case 1 :
@@ -71,5 +71,16 @@ public class Rectangle extends Shape {
         System.out.println( volumeMessage + volume);
     }
 
-
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "length=" + length +
+                ", width=" + width +
+                ", height=" + height +
+                ", choice=" + choice +
+                ", scanner=" + scanner +
+                ", areaMessage='" + areaMessage + '\'' +
+                ", volumeMessage='" + volumeMessage + '\'' +
+                '}';
+    }
 }

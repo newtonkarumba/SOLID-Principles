@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class Box extends Rectangle{
 
+
+
     @Override
     public void areaPrompt(int length, int width) {
         super.areaPrompt(length, width);
@@ -24,8 +26,7 @@ public class Box extends Rectangle{
         System.out.println("This is a Box. would you like to do... ");
         System.out.println("1.Area ");
         System.out.println("2.Volume ");
-        Scanner sn = new Scanner(System.in);
-        choice = sn.nextInt();
+        choice = scanner.nextInt();
         switch (choice) {
 
             case 1:

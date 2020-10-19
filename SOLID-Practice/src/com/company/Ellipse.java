@@ -6,9 +6,15 @@ public class Ellipse extends Shape {
     public static final double pie = 3.14;
     private int a;
     private int b;
+    private Scanner sc;
 
-    public void  Prompt(int a,int b){
+
+    public Ellipse() {
         Scanner sc = new Scanner(System.in);
+    }
+
+    public void  Prompt(int a, int b){
+
         System.out.println("Please enter the measurement for a");
         this.a=sc.nextInt();
         System.out.println("Please enter the measurement for b");
@@ -35,8 +41,8 @@ public class Ellipse extends Shape {
         System.out.println("This is an Ellipse. what would you like to do... ");
         System.out.println("1.Area ");
         System.out.println("2.Volume ");
-        Scanner sn = new Scanner(System.in);
-        choice = sn.nextInt();
+
+        choice = sc.nextInt();
         switch (choice) {
 
             case 1:
@@ -53,5 +59,14 @@ public class Ellipse extends Shape {
                 System.out.println("You have entered a wrong choice");
                 Formulate();
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Ellipse{" +
+                "a=" + a +
+                ", b=" + b +
+                ", sc=" + sc +
+                '}';
     }
 }

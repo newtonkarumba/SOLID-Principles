@@ -3,6 +3,7 @@ package com.company;
 import java.util.Scanner;
 
 public class Square extends Rectangle {
+
     @Override
     public void areaPrompt(int length, int width) {
         super.areaPrompt(length, width);
@@ -23,8 +24,8 @@ public class Square extends Rectangle {
         System.out.println("This is a Square. would you like to do... ");
         System.out.println("1.Area ");
         System.out.println("2.Volume ");
-        Scanner sn = new Scanner(System.in);
-        choice = sn.nextInt();
+
+        choice = scanner.nextInt();
         switch (choice) {
 
             case 1:
@@ -40,6 +41,19 @@ public class Square extends Rectangle {
                 System.out.println("You have entered a wrong choice");
                Formulate();
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Square{" +
+                "length=" + length +
+                ", width=" + width +
+                ", height=" + height +
+                ", choice=" + choice +
+                ", scanner=" + scanner +
+                ", areaMessage='" + areaMessage + '\'' +
+                ", volumeMessage='" + volumeMessage + '\'' +
+                '}';
     }
 }
 
