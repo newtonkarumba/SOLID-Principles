@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Scanner;
 
-public abstract class Shape {
+public abstract class Shape implements ShapeI {
      public int choice;
      double area;
      double volume;
